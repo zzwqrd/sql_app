@@ -27,8 +27,7 @@ class _MyAppState extends State<MyApp> {
       splitScreenMode: true,
       builder: (_, Widget? child) {
         return MaterialApp(
-          title: 'ERP',
-          // home: Text("data").tr(),
+          title: 'SQLite Manager',
           initialRoute: AppRoutes.init.initial,
           routes: AppRoutes.init.appRoutes,
           navigatorKey: navigatorKey,
@@ -44,7 +43,6 @@ class _MyAppState extends State<MyApp> {
           darkTheme: ThemeData(
             textTheme: AppTypography.dark(context).toTextTheme(),
           ),
-
           scrollBehavior: const MaterialScrollBehavior().copyWith(
             dragDevices: {
               PointerDeviceKind.mouse,

@@ -27,6 +27,7 @@ class AppInitializer {
 
     HttpOverrides.global = MyHttpOverrides();
     final temporaryDirectory = await getTemporaryDirectory();
+
     HydratedBloc.storage = await HydratedStorage.build(
       storageDirectory: HydratedStorageDirectory(temporaryDirectory.path),
     );
