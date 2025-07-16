@@ -5,6 +5,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/routes/app_routes.dart';
+import 'core/routes/app_routes_fun.dart';
 import 'core/utils/phoneix.dart';
 import 'core/utils/unfucs.dart';
 
@@ -25,7 +27,9 @@ class _MyAppState extends State<MyApp> {
       builder: (_, Widget? child) {
         return MaterialApp(
           title: 'ERP',
-          home: Text(""),
+          // home: Text("data").tr(),
+          initialRoute: AppRoutes.init.initial,
+          routes: AppRoutes.init.appRoutes,
           navigatorKey: navigatorKey,
           navigatorObservers: <NavigatorObserver>[routeObserver],
           debugShowCheckedModeBanner: false,
@@ -117,7 +121,3 @@ class _AppBuilder extends StatelessWidget {
     );
   }
 }
-
-final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-final RouteObserver<PageRoute<dynamic>> routeObserver =
-    RouteObserver<PageRoute<dynamic>>();

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:toastification/toastification.dart';
 
-import '../../app.dart';
+import '../routes/app_routes_fun.dart';
 
 class ToastHelper {
   static final ToastHelper _instance = ToastHelper._internal();

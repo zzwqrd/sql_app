@@ -25,7 +25,7 @@ Future<void> main() async {
           supportedLocales: const [
             Locale('ar'),
             Locale('en'),
-          ], // اللغات المدعومة
+          ],
           child: const MyApp(),
         ),
       );

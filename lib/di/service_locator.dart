@@ -1,19 +1,10 @@
 import 'package:get_it/get_it.dart';
+
+import '../features/splash_view/presentation/controller/controller.dart';
 // Controllers
 
 final GetIt sl = GetIt.instance;
 
 Future<void> setupServiceLocator() async {
-  _registerControllers();
-}
-
-_registerControllers() {
-  // sl
-  //   ..registerFactory<SplashController>(() => SplashController())
-  //   ..registerFactory<LoginController>(() => LoginController())
-  //   ..registerLazySingleton<NavigationBloc>(() => NavigationBloc())
-  //   ..registerFactory<HomeController>(() => HomeController())
-  //   ..registerFactory<CitiesBloc>(() => CitiesBloc())
-  //   ..registerFactory<ExpansionTileCubit>(() => ExpansionTileCubit())
-  //   ..registerLazySingleton<AppVersionController>(() => AppVersionController());
+  sl.registerFactory<SplashController>(() => SplashController());
 }
