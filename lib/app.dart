@@ -44,6 +44,7 @@ class _MyAppState extends State<MyApp> {
           darkTheme: ThemeData(
             textTheme: AppTypography.dark(context).toTextTheme(),
           ),
+
           scrollBehavior: const MaterialScrollBehavior().copyWith(
             dragDevices: {
               PointerDeviceKind.mouse,

@@ -27,6 +27,25 @@ extension AppThemeContext on BuildContext {
   Color get errorColor => colors.error;
   Color get warningColor => colors.warning;
   Color get infoColor => colors.info;
+  Color get shadowColor => colors.shadow;
+  Color get surfaceColor => colors.surface;
+  Color get onSurfaceColor => colors.onSurface;
+  Color get highlightColor => colors.highlight;
+  Color get shimmerBaseColor => colors.shimmerBase;
+  Color get shimmerHighlightColor => colors.shimmerHighlight;
+  Color get inverseSurfaceColor => colors.inverseSurface;
+  Color get onInverseSurfaceColor => colors.onInverseSurface;
+  Color get outlineColor => colors.outline;
+  Color get onPrimaryColor => colors.onPrimary;
+  Color get onSecondaryColor => colors.onSecondary;
+  Color get onTertiaryColor => colors.onTertiary;
+  Color get onErrorColor => colors.onError;
+  Color get onPrimaryContainerColor => colors.onPrimaryContainer;
+  Color get onSecondaryContainerColor => colors.onSecondaryContainer;
+  Color get onTertiaryContainerColor => colors.onTertiaryContainer;
+  Color get onErrorContainerColor => colors.onErrorContainer;
+  Color get surfaceVariantColor => colors.surfaceVariant;
+  Color get onSurfaceVariantColor => colors.onSurfaceVariant;
 }
 
 // امتداد على Color

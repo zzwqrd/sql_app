@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sq_app/core/routes/app_routes_fun.dart';
+import 'package:sq_app/core/utils/app_colors/extension.dart';
 
 import 'app_text_styles.dart';
+import 'extension.dart';
 
 class AppTypography {
   // الأنماط الأساسية
@@ -164,4 +167,50 @@ class AppTypography {
       ),
     );
   }
+
+  /// Input Decoration Theme
+  static InputDecorationTheme get inputDecorationTheme => InputDecorationTheme(
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+        labelStyle: navigatorKey.currentContext!.titleMedium.copyWith(
+          fontSize: 14,
+          color: navigatorKey.currentContext!.primaryColor,
+        ),
+        // labelStyle:
+        //     titleMedium.copyWith(fontSize: 14, color: navigatorKey.currentContext!.primaryColor),
+        // hintStyle: smallText.copyWith(fontSize: 12, color: AppColors.greyColor),
+        // fillColor: AppColors.whiteColor,
+        filled: true,
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide:
+              BorderSide(color: navigatorKey.currentContext!.errorColor),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderSide:
+              BorderSide(color: navigatorKey.currentContext!.errorColor),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+              color: navigatorKey.currentContext!.displayLarge.color!),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        border: OutlineInputBorder(
+          borderSide:
+              BorderSide(color: navigatorKey.currentContext!.warningColor),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide:
+              BorderSide(color: navigatorKey.currentContext!.primaryColor),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide:
+              BorderSide(color: navigatorKey.currentContext!.primaryColor),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        contentPadding:
+            const EdgeInsets.symmetric(vertical: 17, horizontal: 20),
+      );
 }
