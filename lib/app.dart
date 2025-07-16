@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/routes/app_routes.dart';
 import 'core/routes/app_routes_fun.dart';
+import 'core/utils/app_text_styles/app_typography.dart';
 import 'core/utils/phoneix.dart';
 import 'core/utils/unfucs.dart';
 
@@ -37,6 +38,12 @@ class _MyAppState extends State<MyApp> {
           supportedLocales: context.supportedLocales,
           locale: context.locale,
           themeMode: ThemeMode.light,
+          theme: ThemeData(
+            textTheme: AppTypography.light(context).toTextTheme(),
+          ),
+          darkTheme: ThemeData(
+            textTheme: AppTypography.dark(context).toTextTheme(),
+          ),
           scrollBehavior: const MaterialScrollBehavior().copyWith(
             dragDevices: {
               PointerDeviceKind.mouse,
