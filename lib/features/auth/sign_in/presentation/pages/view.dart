@@ -6,6 +6,7 @@ import '.../../../../../../../core/utils/sizedbox_extensions.dart';
 import '../../../../../commonWidget/app_text.dart';
 import '../../../../../commonWidget/button_animation/LoadingButton.dart';
 import '../../../../../commonWidget/text_input.dart';
+import '../../../../../core/utils/flash_helper.dart';
 import '../../../../../gen/assets.gen.dart';
 
 class LoginView extends StatefulWidget {
@@ -50,7 +51,12 @@ class _LoginViewState extends State<LoginView> {
             18.verticalSpace,
             LoadingButton(
               title: 'Login',
-              onTap: () {},
+              onTap: () {
+                ToastHelper().success(
+                  msg: 'Login Successful',
+                  description: 'Welcome back!',
+                );
+              },
               isAnimating: false,
             ),
           ],
