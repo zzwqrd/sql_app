@@ -33,6 +33,7 @@ class AuthCubit extends HydratedCubit<AuthState> {
   // ---- عمليات المصادقة ----
   Future<void> loginAdmin(String email, String password) async {
     emit(state.copyWith(isLoading: true, error: null));
+    // Simulate network delay
     try {
       final admin = await _db
           .table('admins')
