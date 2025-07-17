@@ -4,7 +4,6 @@ import 'dart:io';
 
 import 'package:croppy/croppy.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -31,7 +30,7 @@ class AppInitializer {
     HydratedBloc.storage = await HydratedStorage.build(
       storageDirectory: HydratedStorageDirectory(temporaryDirectory.path),
     );
-    if (kDebugMode) await HydratedBloc.storage.clear();
+    // if (kDebugMode) await HydratedBloc.storage.clear();
 
     try {
       // ✅ 1. استرجاع النسخة الاحتياطية إن وُجدت قبل فتح القاعدة

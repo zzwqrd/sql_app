@@ -3,4 +3,5 @@ class NamedRoutes {
   NamedRoutes.i_internal();
   final splash = "/splash";
   final login = "/login";
+  final home = "/home";
 }
