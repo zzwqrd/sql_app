@@ -6,7 +6,7 @@ import 'package:sq_app/core/utils/input_decoration_extensions.dart';
 
 import '../core/utils/app_text_styles/app_typography.dart';
 
-class AppCustomFormNew extends StatefulWidget {
+class AppCustomForm extends StatefulWidget {
   final String? hintText, title, helperText;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
@@ -28,7 +28,7 @@ class AppCustomFormNew extends StatefulWidget {
   final FocusNode? focusNode;
   final EdgeInsetsGeometry? contentPadding;
 
-  const AppCustomFormNew({
+  const AppCustomForm({
     super.key,
     this.hintText,
     this.title,
@@ -61,7 +61,7 @@ class AppCustomFormNew extends StatefulWidget {
     this.contentPadding,
   });
 
-  AppCustomFormNew copyWith({
+  AppCustomForm copyWith({
     Key? key,
     String? hintText,
     String? title,
@@ -93,7 +93,7 @@ class AppCustomFormNew extends StatefulWidget {
     String? errorText,
     EdgeInsetsGeometry? contentPadding,
   }) {
-    return AppCustomFormNew(
+    return AppCustomForm(
       key: key ?? this.key,
       hintText: hintText ?? this.hintText,
       title: title ?? this.title,
@@ -128,10 +128,10 @@ class AppCustomFormNew extends StatefulWidget {
   }
 
   @override
-  State<AppCustomFormNew> createState() => _AppCustomFormNewState();
+  State<AppCustomForm> createState() => _AppCustomFormState();
 }
 
-class _AppCustomFormNewState extends State<AppCustomFormNew> {
+class _AppCustomFormState extends State<AppCustomForm> {
   bool showPass = false;
   late FocusNode _focusNode;
   bool hasFocus = false;
@@ -306,56 +306,56 @@ class _AppCustomFormNewState extends State<AppCustomFormNew> {
                   widget.border ?? _buildBorder(theme, disabled: true),
               errorMaxLines: 2,
             ).applyInputDecorationTheme(AppTypography.inputDecorationTheme)),
-        if (widget.errorText != null && widget.errorText!.isNotEmpty)
-          Padding(
-            padding: EdgeInsets.only(top: 4.h),
-            child: Text(
-              widget.errorText!,
-              style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.error,
-              ),
-            ),
-          ).withPadding(top: 4.h),
-        if (widget.helperText != null && widget.helperText!.isNotEmpty)
-          Padding(
-            padding: EdgeInsets.only(top: 4.h),
-            child: Text(
-              widget.helperText!,
-              style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.hintColor,
-              ),
-            ),
-          ).withPadding(top: 4.h),
-        if (widget.isRequired)
-          Padding(
-            padding: EdgeInsets.only(top: 4.h),
-            child: Text(
-              '* Required',
-              style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.colorScheme.error,
-              ),
-            ),
-          ).withPadding(top: 4.h),
-        if (widget.loading)
-          Padding(
-            padding: EdgeInsets.only(top: 8.h),
-            child: Center(
-              child: CircularProgressIndicator(
-                strokeWidth: 2,
-                valueColor: AlwaysStoppedAnimation(theme.primaryColor),
-              ),
-            ),
-          ).withPadding(top: 8.h),
-        if (widget.fieldType == FieldType.password)
-          Padding(
-            padding: EdgeInsets.only(top: 8.h),
-            child: Text(
-              'Password must be at least 6 characters',
-              style: theme.textTheme.bodySmall?.copyWith(
-                color: theme.hintColor,
-              ),
-            ),
-          ).withPadding(top: 8.h),
+        // if (widget.errorText != null && widget.errorText!.isNotEmpty)
+        //   Padding(
+        //     padding: EdgeInsets.only(top: 4.h),
+        //     child: Text(
+        //       widget.errorText!,
+        //       style: theme.textTheme.bodySmall?.copyWith(
+        //         color: theme.colorScheme.error,
+        //       ),
+        //     ),
+        //   ).withPadding(top: 4.h),
+        // if (widget.helperText != null && widget.helperText!.isNotEmpty)
+        //   Padding(
+        //     padding: EdgeInsets.only(top: 4.h),
+        //     child: Text(
+        //       widget.helperText!,
+        //       style: theme.textTheme.bodySmall?.copyWith(
+        //         color: theme.hintColor,
+        //       ),
+        //     ),
+        //   ).withPadding(top: 4.h),
+        // if (widget.isRequired)
+        //   Padding(
+        //     padding: EdgeInsets.only(top: 4.h),
+        //     child: Text(
+        //       '* Required',
+        //       style: theme.textTheme.bodySmall?.copyWith(
+        //         color: theme.colorScheme.error,
+        //       ),
+        //     ),
+        //   ).withPadding(top: 4.h),
+        // if (widget.loading)
+        //   Padding(
+        //     padding: EdgeInsets.only(top: 8.h),
+        //     child: Center(
+        //       child: CircularProgressIndicator(
+        //         strokeWidth: 2,
+        //         valueColor: AlwaysStoppedAnimation(theme.primaryColor),
+        //       ),
+        //     ),
+        //   ).withPadding(top: 8.h),
+        // if (widget.fieldType == FieldType.password)
+        //   Padding(
+        //     padding: EdgeInsets.only(top: 8.h),
+        //     child: Text(
+        //       'Password must be at least 6 characters',
+        //       style: theme.textTheme.bodySmall?.copyWith(
+        //         color: theme.hintColor,
+        //       ),
+        //     ),
+        //   ).withPadding(top: 8.h),
       ],
     );
   }

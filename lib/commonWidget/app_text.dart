@@ -4,7 +4,7 @@ import 'package:sq_app/core/utils/app_text_styles/extension.dart';
 
 import '../core/routes/app_routes_fun.dart';
 
-class MyTextAppNew extends StatelessWidget {
+class MyTextApp extends StatelessWidget {
   final String title;
   final TextStyle? style;
   final TextAlign? align;
@@ -16,7 +16,7 @@ class MyTextAppNew extends StatelessWidget {
   final double? iconSize;
   final double? imageSize;
 
-  const MyTextAppNew({
+  const MyTextApp({
     super.key,
     required this.title,
     this.style,
@@ -30,7 +30,7 @@ class MyTextAppNew extends StatelessWidget {
     this.imageSize,
   });
 
-  factory MyTextAppNew.h1(
+  factory MyTextApp.h1(
     String text, {
     TextAlign? align,
     bool copyable = false,
@@ -41,7 +41,7 @@ class MyTextAppNew extends StatelessWidget {
     double? iconSize,
     double? imageSize,
   }) {
-    return MyTextAppNew(
+    return MyTextApp(
       title: text,
       style: navigatorKey.currentContext!.displayLarge,
       align: align,
@@ -55,7 +55,7 @@ class MyTextAppNew extends StatelessWidget {
     );
   }
 
-  factory MyTextAppNew.h2(
+  factory MyTextApp.h2(
     String text, {
     TextAlign? align,
     bool copyable = false,
@@ -66,7 +66,7 @@ class MyTextAppNew extends StatelessWidget {
     double? iconSize,
     double? imageSize,
   }) {
-    return MyTextAppNew(
+    return MyTextApp(
       title: text,
       style: navigatorKey.currentContext!.displayMedium,
       align: align,
@@ -80,7 +80,7 @@ class MyTextAppNew extends StatelessWidget {
     );
   }
 
-  factory MyTextAppNew.h3(
+  factory MyTextApp.h3(
     String text, {
     TextAlign? align,
     bool copyable = false,
@@ -91,7 +91,7 @@ class MyTextAppNew extends StatelessWidget {
     double? iconSize,
     double? imageSize,
   }) {
-    return MyTextAppNew(
+    return MyTextApp(
       title: text,
       style: navigatorKey.currentContext!.displaySmall,
       align: align,
@@ -105,7 +105,7 @@ class MyTextAppNew extends StatelessWidget {
     );
   }
 
-  factory MyTextAppNew.h4(
+  factory MyTextApp.h4(
     String text, {
     TextAlign? align,
     bool copyable = false,
@@ -116,7 +116,7 @@ class MyTextAppNew extends StatelessWidget {
     double? iconSize,
     double? imageSize,
   }) {
-    return MyTextAppNew(
+    return MyTextApp(
       title: text,
       style: navigatorKey.currentContext!.headlineLarge,
       align: align,
@@ -130,7 +130,7 @@ class MyTextAppNew extends StatelessWidget {
     );
   }
 
-  factory MyTextAppNew.h5(
+  factory MyTextApp.h5(
     String text, {
     TextAlign? align,
     bool copyable = false,
@@ -141,7 +141,7 @@ class MyTextAppNew extends StatelessWidget {
     double? iconSize,
     double? imageSize,
   }) {
-    return MyTextAppNew(
+    return MyTextApp(
       title: text,
       style: navigatorKey.currentContext!.headlineMedium,
       align: align,
@@ -155,7 +155,7 @@ class MyTextAppNew extends StatelessWidget {
     );
   }
 
-  factory MyTextAppNew.h6(
+  factory MyTextApp.h6(
     String text, {
     TextAlign? align,
     bool copyable = false,
@@ -166,7 +166,7 @@ class MyTextAppNew extends StatelessWidget {
     double? iconSize,
     double? imageSize,
   }) {
-    return MyTextAppNew(
+    return MyTextApp(
       title: text,
       style: navigatorKey.currentContext!.headlineSmall,
       align: align,
@@ -180,7 +180,7 @@ class MyTextAppNew extends StatelessWidget {
     );
   }
 
-  factory MyTextAppNew.nav(
+  factory MyTextApp.nav(
     String text, {
     TextAlign? align,
     bool copyable = false,
@@ -191,7 +191,7 @@ class MyTextAppNew extends StatelessWidget {
     double? iconSize,
     double? imageSize,
   }) {
-    return MyTextAppNew(
+    return MyTextApp(
       title: text,
       style: navigatorKey.currentContext!.bodyLarge.copyWith(
         color: Colors.blue,
@@ -208,7 +208,7 @@ class MyTextAppNew extends StatelessWidget {
     );
   }
 
-  factory MyTextAppNew.copyable(
+  factory MyTextApp.copyable(
     String text, {
     TextStyle? style,
     TextAlign? align,
@@ -219,7 +219,7 @@ class MyTextAppNew extends StatelessWidget {
     double? iconSize,
     double? imageSize,
   }) {
-    return MyTextAppNew(
+    return MyTextApp(
       title: text,
       style: style ?? navigatorKey.currentContext!.bodyMedium,
       align: align,
@@ -233,7 +233,7 @@ class MyTextAppNew extends StatelessWidget {
     );
   }
 
-  MyTextAppNew copyWith({
+  MyTextApp copyWith({
     String? title,
     TextStyle? style,
     TextAlign? align,
@@ -245,7 +245,7 @@ class MyTextAppNew extends StatelessWidget {
     double? iconSize,
     double? imageSize,
   }) {
-    return MyTextAppNew(
+    return MyTextApp(
       title: title ?? this.title,
       style: style ?? this.style,
       align: align ?? this.align,
